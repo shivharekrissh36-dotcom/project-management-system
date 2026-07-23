@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — ProManage</title>
+  <meta name="description" content="Project Management Kanban Board">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <aside class="sidebar">
+      <a href="index.html" class="sidebar-logo"><div class="sidebar-logo-icon">⚡</div> ProManage</a>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Main</div>
+        <a href="dashboard.html" class="sidebar-nav-item"><span class="sidebar-nav-icon">📊</span> Dashboard</a>
+        <a href="projects.html" class="sidebar-nav-item active"><span class="sidebar-nav-icon">📋</span> Projects</a>
+        <a href="tasks.html" class="sidebar-nav-item"><span class="sidebar-nav-icon">✅</span> Tasks <span class="sidebar-nav-badge">12</span></a>
+        <a href="team.html" class="sidebar-nav-item"><span class="sidebar-nav-icon">👥</span> Team</a>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Tools</div>
+        <a href="#" class="sidebar-nav-item"><span class="sidebar-nav-icon">📅</span> Calendar</a>
+        <a href="#" class="sidebar-nav-item"><span class="sidebar-nav-icon">💬</span> Messages <span class="sidebar-nav-badge">3</span></a>
+        <a href="#" class="sidebar-nav-item"><span class="sidebar-nav-icon">📁</span> Files</a>
+        <a href="#" class="sidebar-nav-item"><span class="sidebar-nav-icon">⚙️</span> Settings</a>
+      </div>
+      <div style="margin-top:auto;padding-top:1.5rem;border-top:1px solid var(--color-border);display:flex;align-items:center;gap:0.75rem">
+        <div class="avatar" style="background:#2563EB">SK</div>
+        <div><div style="font-size:0.875rem;font-weight:600;color:var(--color-text)">Shiv H.</div><div style="font-size:0.75rem;color:var(--color-text-muted)">Project Manager</div></div>
+      </div>
+    </aside>
+    
+    <main class="dashboard-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <div>
+          <h2>Projects</h2>
+          <p style="color: var(--color-text-muted);">Manage and track project progress</p>
+        </div>
+        <button class="btn-primary">+ New Project</button>
+      </div>
+
+      <div class="kanban-board" style="display: flex; gap: 1.5rem; overflow-x: auto; padding-bottom: 1rem;">
+        <div class="kanban-column" style="flex: 0 0 300px; background: var(--color-bg-secondary); border-radius: 0.5rem; padding: 1rem;">
+          <h3 style="margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; font-size: 1rem;"><span style="display:flex;align-items:center;gap:0.5rem;"><span style="color:#94A3B8; font-size: 1.5rem;">•</span> Backlog</span> <span style="background: var(--color-bg); padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.8rem;">3</span></h3>
+          <div class="kanban-card" draggable="true" style="background: var(--color-bg); padding: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1rem; cursor: grab;">
+            <span class="chip-purple" style="font-size:0.75rem; padding:0.25rem 0.5rem; border-radius:1rem; background:#E9D5FF; color:#6B21A8; margin-bottom: 0.5rem; display: inline-block;">Design</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 1rem;">Design system component library</h4>
+            <div class="kanban-card-footer" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-text-muted);">
+              <div class="avatar" style="width:24px;height:24px;font-size:0.7rem;background:#8B5CF6">PK</div>
+              <span>Aug 20</span>
+            </div>
+          </div>
+          <div class="kanban-card" draggable="true" style="background: var(--color-bg); padding: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1rem; cursor: grab;">
+            <span class="chip-primary" style="font-size:0.75rem; padding:0.25rem 0.5rem; border-radius:1rem; background:#DBEAFE; color:#1D4ED8; margin-bottom: 0.5rem; display: inline-block;">Frontend</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 1rem;">Implement dark mode toggle</h4>
+            <div class="kanban-card-footer" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-text-muted);">
+              <div class="avatar" style="width:24px;height:24px;font-size:0.7rem;background:#06B6D4">AR</div>
+              <span>Aug 25</span>
+            </div>
+          </div>
+          <div class="kanban-card" draggable="true" style="background: var(--color-bg); padding: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1rem; cursor: grab;">
+            <span class="chip-accent" style="font-size:0.75rem; padding:0.25rem 0.5rem; border-radius:1rem; background:#FEF3C7; color:#B45309; margin-bottom: 0.5rem; display: inline-block;">Research</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 1rem;">Evaluate new CI/CD tools</h4>
+            <div class="kanban-card-footer" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-text-muted);">
+              <div class="avatar" style="width:24px;height:24px;font-size:0.7rem;background:#F59E0B">RS</div>
+              <span>Sep 01</span>
+            </div>
+          </div>
+          <button class="kanban-add-btn" style="width: 100%; padding: 0.5rem; border: 1px dashed var(--color-border); background: transparent; border-radius: 0.5rem; cursor: pointer; color: var(--color-text-muted);">+ Add Card</button>
+        </div>
+
+        <div class="kanban-column" style="flex: 0 0 300px; background: var(--color-bg-secondary); border-radius: 0.5rem; padding: 1rem;">
+          <h3 style="margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; font-size: 1rem;"><span style="display:flex;align-items:center;gap:0.5rem;"><span style="color:#2563EB; font-size: 1.5rem;">•</span> In Progress</span> <span style="background: var(--color-bg); padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.8rem;">3</span></h3>
+          <div class="kanban-card" draggable="true" style="background: var(--color-bg); padding: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1rem; cursor: grab;">
+            <span class="chip-error" style="font-size:0.75rem; padding:0.25rem 0.5rem; border-radius:1rem; background:#FEE2E2; color:#B91C1C; margin-bottom: 0.5rem; display: inline-block;">Urgent</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 1rem;">Fix authentication token refresh</h4>
+            <div class="kanban-card-footer" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-text-muted);">
+              <div class="avatar" style="width:24px;height:24px;font-size:0.7rem;background:#10B981">MJ</div>
+              <span>Jul 28</span>
+            </div>
+          </div>
+          <div class="kanban-card" draggable="true" style="background: var(--color-bg); padding: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1rem; cursor: grab;">
+            <span class="chip-primary" style="font-size:0.75rem; padding:0.25rem 0.5rem; border-radius:1rem; background:#DBEAFE; color:#1D4ED8; margin-bottom: 0.5rem; display: inline-block;">Frontend</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 1rem;">Build responsive dashboard layout</h4>
+            <div class="kanban-card-footer" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-text-muted);">
+              <div class="avatar" style="width:24px;height:24px;font-size:0.7rem;background:#06B6D4">AR</div>
+              <span>Aug 05</span>
+            </div>
+          </div>
+          <div class="kanban-card" draggable="true" style="background: var(--color-bg); padding: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1rem; cursor: grab;">
+            <span class="chip-warning" style="font-size:0.75rem; padding:0.25rem 0.5rem; border-radius:1rem; background:#FEF3C7; color:#D97706; margin-bottom: 0.5rem; display: inline-block;">Backend</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 1rem;">Optimize database query performance</h4>
+            <div class="kanban-card-footer" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-text-muted);">
+              <div class="avatar" style="width:24px;height:24px;font-size:0.7rem;background:#10B981">MJ</div>
+              <span>Aug 10</span>
+            </div>
+          </div>
+          <button class="kanban-add-btn" style="width: 100%; padding: 0.5rem; border: 1px dashed var(--color-border); background: transparent; border-radius: 0.5rem; cursor: pointer; color: var(--color-text-muted);">+ Add Card</button>
+        </div>
+
+        <div class="kanban-column" style="flex: 0 0 300px; background: var(--color-bg-secondary); border-radius: 0.5rem; padding: 1rem;">
+          <h3 style="margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; font-size: 1rem;"><span style="display:flex;align-items:center;gap:0.5rem;"><span style="color:#F59E0B; font-size: 1.5rem;">•</span> In Review</span> <span style="background: var(--color-bg); padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.8rem;">2</span></h3>
+          <div class="kanban-card" draggable="true" style="background: var(--color-bg); padding: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1rem; cursor: grab;">
+            <span class="chip-success" style="font-size:0.75rem; padding:0.25rem 0.5rem; border-radius:1rem; background:#D1FAE5; color:#059669; margin-bottom: 0.5rem; display: inline-block;">QA</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 1rem;">End-to-end testing: checkout flow</h4>
+            <div class="kanban-card-footer" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-text-muted);">
+              <div class="avatar" style="width:24px;height:24px;font-size:0.7rem;background:#EC4899">DL</div>
+              <span>Jul 25</span>
+            </div>
+          </div>
+          <div class="kanban-card" draggable="true" style="background: var(--color-bg); padding: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1rem; cursor: grab;">
+            <span class="chip-accent" style="font-size:0.75rem; padding:0.25rem 0.5rem; border-radius:1rem; background:#FEF3C7; color:#B45309; margin-bottom: 0.5rem; display: inline-block;">DevOps</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 1rem;">Configure staging environment</h4>
+            <div class="kanban-card-footer" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-text-muted);">
+              <div class="avatar" style="width:24px;height:24px;font-size:0.7rem;background:#F59E0B">RS</div>
+              <span>Jul 27</span>
+            </div>
+          </div>
+          <button class="kanban-add-btn" style="width: 100%; padding: 0.5rem; border: 1px dashed var(--color-border); background: transparent; border-radius: 0.5rem; cursor: pointer; color: var(--color-text-muted);">+ Add Card</button>
+        </div>
+
+        <div class="kanban-column" style="flex: 0 0 300px; background: var(--color-bg-secondary); border-radius: 0.5rem; padding: 1rem;">
+          <h3 style="margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; font-size: 1rem;"><span style="display:flex;align-items:center;gap:0.5rem;"><span style="color:#10B981; font-size: 1.5rem;">•</span> Done</span> <span style="background: var(--color-bg); padding: 0.25rem 0.5rem; border-radius: 1rem; font-size: 0.8rem;">2</span></h3>
+          <div class="kanban-card" draggable="true" style="background: var(--color-bg); padding: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1rem; cursor: grab;">
+            <span class="chip-success" style="font-size:0.75rem; padding:0.25rem 0.5rem; border-radius:1rem; background:#D1FAE5; color:#059669; margin-bottom: 0.5rem; display: inline-block;">Done</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 1rem;">User onboarding email templates</h4>
+            <div class="kanban-card-footer" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-text-muted);">
+              <div class="avatar" style="width:24px;height:24px;font-size:0.7rem;background:#8B5CF6">PK</div>
+              <span>Jul 18</span>
+            </div>
+          </div>
+          <div class="kanban-card" draggable="true" style="background: var(--color-bg); padding: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 1rem; cursor: grab;">
+            <span class="chip-success" style="font-size:0.75rem; padding:0.25rem 0.5rem; border-radius:1rem; background:#D1FAE5; color:#059669; margin-bottom: 0.5rem; display: inline-block;">Done</span>
+            <h4 style="font-size: 0.95rem; margin-bottom: 1rem;">Payment gateway integration</h4>
+            <div class="kanban-card-footer" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-text-muted);">
+              <div class="avatar" style="width:24px;height:24px;font-size:0.7rem;background:#10B981">MJ</div>
+              <span>Jul 15</span>
+            </div>
+          </div>
+          <button class="kanban-add-btn" style="width: 100%; padding: 0.5rem; border: 1px dashed var(--color-border); background: transparent; border-radius: 0.5rem; cursor: pointer; color: var(--color-text-muted);">+ Add Card</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/kanban.js"></script>
+</body>
+</html>

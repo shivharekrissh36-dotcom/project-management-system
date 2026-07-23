@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — ProManage</title>
+  <meta name="description" content="ProManage Dashboard - Track your projects, tasks, and team performance.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <!-- Sidebar + Main Content Layout -->
+  <div class="dashboard-layout">
+    
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <a href="index.html" class="sidebar-logo">
+        <div class="sidebar-logo-icon">⚡</div> ProManage
+      </a>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Main</div>
+        <a href="dashboard.html" class="sidebar-nav-item active">
+          <span class="sidebar-nav-icon">📊</span> Dashboard
+        </a>
+        <a href="projects.html" class="sidebar-nav-item">
+          <span class="sidebar-nav-icon">📋</span> Projects
+        </a>
+        <a href="tasks.html" class="sidebar-nav-item">
+          <span class="sidebar-nav-icon">✅</span> Tasks <span class="sidebar-nav-badge">12</span>
+        </a>
+        <a href="team.html" class="sidebar-nav-item">
+          <span class="sidebar-nav-icon">👥</span> Team
+        </a>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Tools</div>
+        <a href="#" class="sidebar-nav-item">
+          <span class="sidebar-nav-icon">📅</span> Calendar
+        </a>
+        <a href="#" class="sidebar-nav-item">
+          <span class="sidebar-nav-icon">💬</span> Messages <span class="sidebar-nav-badge">3</span>
+        </a>
+        <a href="#" class="sidebar-nav-item">
+          <span class="sidebar-nav-icon">📁</span> Files
+        </a>
+        <a href="#" class="sidebar-nav-item">
+          <span class="sidebar-nav-icon">⚙️</span> Settings
+        </a>
+      </div>
+
+      <div style="margin-top:auto;padding-top:1.5rem;border-top:1px solid var(--color-border);display:flex;align-items:center;gap:0.75rem">
+        <div class="avatar" style="background:#2563EB">SK</div>
+        <div>
+          <div style="font-size:0.875rem;font-weight:600;color:var(--color-text)">Shiv Harekrishh</div>
+          <div style="font-size:0.75rem;color:var(--color-text-muted)">Project Manager</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="dashboard-main">
+      
+      <!-- TOP BAR -->
+      <div class="dashboard-topbar">
+        <div style="display:flex;align-items:center;gap:1rem">
+          <button class="sidebar-toggle btn btn-ghost btn-sm hide-desktop" style="font-size:1.25rem">☰</button>
+          <div class="search-bar">
+            <span class="search-bar-icon">🔍</span>
+            <input type="text" placeholder="Search tasks, projects, team...">
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:1rem">
+          <button class="btn btn-ghost btn-icon" title="Notifications" style="position:relative">
+            🔔
+            <span style="position:absolute;top:4px;right:4px;width:8px;height:8px;background:var(--color-error);border-radius:50%"></span>
+          </button>
+          <div class="avatar avatar-sm" style="background:#2563EB">SK</div>
+        </div>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="dashboard-content">
+        
+        <!-- Header -->
+        <div class="dashboard-header">
+          <h1 class="dashboard-title">Dashboard</h1>
+          <p class="dashboard-subtitle">Welcome back, Shiv! Here's what's happening with your projects today.</p>
+        </div>
+
+        <!-- 4 STAT CARDS in a grid-4 -->
+        <div class="grid grid-4 gap-6" style="margin-bottom:2rem">
+          <!-- Card 1 -->
+          <div class="stat-card animate-on-scroll">
+            <div class="stat-icon" style="background:#EFF6FF;color:#2563EB">📋</div>
+            <div class="stat-content">
+              <div class="stat-value"><span class="counter" data-target="24">0</span></div>
+              <div class="stat-label">Total Projects</div>
+              <div class="stat-change up">↑ 12% vs last month</div>
+              <div class="mini-chart" style="margin-top:0.5rem">
+                <div class="mini-bar" data-height="40"></div>
+                <div class="mini-bar" data-height="60"></div>
+                <div class="mini-bar" data-height="45"></div>
+                <div class="mini-bar" data-height="70"></div>
+                <div class="mini-bar active" data-height="90"></div>
+                <div class="mini-bar" data-height="65"></div>
+                <div class="mini-bar" data-height="80"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="stat-card animate-on-scroll delay-100">
+            <div class="stat-icon" style="background:#ECFDF5;color:#10B981">✅</div>
+            <div class="stat-content">
+              <div class="stat-value"><span class="counter" data-target="156">0</span></div>
+              <div class="stat-label">Tasks Completed</div>
+              <div class="stat-change up">↑ 8% vs last week</div>
+              <div class="mini-chart" style="margin-top:0.5rem">
+                <div class="mini-bar" data-height="30"></div>
+                <div class="mini-bar" data-height="50"></div>
+                <div class="mini-bar" data-height="65"></div>
+                <div class="mini-bar" data-height="80"></div>
+                <div class="mini-bar active" data-height="95"></div>
+                <div class="mini-bar" data-height="70"></div>
+                <div class="mini-bar" data-height="85"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="stat-card animate-on-scroll delay-200">
+            <div class="stat-icon" style="background:#ECFEFF;color:#06B6D4">👥</div>
+            <div class="stat-content">
+              <div class="stat-value"><span class="counter" data-target="18">0</span></div>
+              <div class="stat-label">Team Members</div>
+              <div class="stat-change up">+3 new this month</div>
+              <div class="mini-chart" style="margin-top:0.5rem">
+                <div class="mini-bar" data-height="50"></div>
+                <div class="mini-bar" data-height="50"></div>
+                <div class="mini-bar" data-height="60"></div>
+                <div class="mini-bar" data-height="60"></div>
+                <div class="mini-bar active" data-height="80"></div>
+                <div class="mini-bar" data-height="80"></div>
+                <div class="mini-bar" data-height="100"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="stat-card animate-on-scroll delay-300">
+            <div class="stat-icon" style="background:#FFFBEB;color:#F59E0B">⏱️</div>
+            <div class="stat-content">
+              <div class="stat-value"><span class="counter" data-target="92">0</span>%</div>
+              <div class="stat-label">On-Time Rate</div>
+              <div class="stat-change up">↑ 5% efficiency</div>
+              <div class="mini-chart" style="margin-top:0.5rem">
+                <div class="mini-bar" data-height="70"></div>
+                <div class="mini-bar" data-height="75"></div>
+                <div class="mini-bar" data-height="80"></div>
+                <div class="mini-bar" data-height="85"></div>
+                <div class="mini-bar active" data-height="92"></div>
+                <div class="mini-bar" data-height="88"></div>
+                <div class="mini-bar" data-height="94"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHARTS ROW (grid-2) -->
+        <div class="grid grid-2 gap-8" style="margin-bottom: 2rem;">
+          <!-- Bar Chart Card -->
+          <div class="card animate-on-scroll">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem">
+              <div>
+                <h4 style="font-size:1.125rem;font-weight:600">Weekly Overview</h4>
+                <p style="font-size:0.8rem;color:var(--color-text-muted)">Tasks completed per day</p>
+              </div>
+              <span class="chip chip-success">● Live</span>
+            </div>
+            <canvas id="barChart" width="600" height="300" style="width:100%;height:auto"></canvas>
+          </div>
+
+          <!-- Donut Chart Card -->
+          <div class="card animate-on-scroll delay-200">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem">
+              <div>
+                <h4 style="font-size:1.125rem;font-weight:600">Task Distribution</h4>
+                <p style="font-size:0.8rem;color:var(--color-text-muted)">By current status</p>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap">
+              <canvas id="donutChart" width="220" height="220"></canvas>
+              <div>
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#10B981;display:inline-block"></span>
+                  <span style="font-size:0.85rem;color:var(--color-text-secondary)">Completed (45)</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#2563EB;display:inline-block"></span>
+                  <span style="font-size:0.85rem;color:var(--color-text-secondary)">In Progress (28)</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#F59E0B;display:inline-block"></span>
+                  <span style="font-size:0.85rem;color:var(--color-text-secondary)">Pending (15)</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#EF4444;display:inline-block"></span>
+                  <span style="font-size:0.85rem;color:var(--color-text-secondary)">Overdue (12)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RECENT PROJECTS TABLE -->
+        <div class="card animate-on-scroll" style="margin-bottom:2rem">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem">
+            <div>
+              <h4 style="font-size:1.125rem;font-weight:600">Recent Projects</h4>
+            </div>
+            <a href="projects.html" class="btn btn-ghost btn-sm">View All →</a>
+          </div>
+          <div class="table-wrap" style="border:none;box-shadow:none">
+            <table class="table">
+              <thead>
+                <tr><th>Project</th><th>Status</th><th>Progress</th><th>Team</th><th>Due Date</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="table-name"><span style="width:32px;height:32px;border-radius:8px;background:#EFF6FF;display:inline-flex;align-items:center;justify-content:center">🌐</span> Website Redesign</td>
+                  <td><span class="badge badge-primary">In Progress</span></td>
+                  <td style="min-width:140px"><div class="progress-wrap"><div class="progress-bar" style="width:72%"></div></div><span style="font-size:0.75rem;color:var(--color-text-muted)">72%</span></td>
+                  <td><div class="avatar-group"><div class="avatar avatar-sm" style="background:#2563EB">SK</div><div class="avatar avatar-sm" style="background:#06B6D4">AR</div><div class="avatar avatar-sm" style="background:#8B5CF6">PK</div><div class="avatar avatar-sm" style="background:#EC4899">+1</div></div></td>
+                  <td style="font-size:0.85rem;color:var(--color-text-secondary)">Aug 15, 2026</td>
+                </tr>
+                <tr>
+                  <td class="table-name"><span style="width:32px;height:32px;border-radius:8px;background:#ECFEFF;display:inline-flex;align-items:center;justify-content:center">📱</span> Mobile App v2.0</td>
+                  <td><span class="badge badge-primary">In Progress</span></td>
+                  <td style="min-width:140px"><div class="progress-wrap"><div class="progress-bar" style="width:45%"></div></div><span style="font-size:0.75rem;color:var(--color-text-muted)">45%</span></td>
+                  <td><div class="avatar-group"><div class="avatar avatar-sm" style="background:#10B981">MJ</div><div class="avatar avatar-sm" style="background:#F59E0B">RS</div><div class="avatar avatar-sm" style="background:#EF4444">DL</div></div></td>
+                  <td style="font-size:0.85rem;color:var(--color-text-secondary)">Sep 01, 2026</td>
+                </tr>
+                <tr>
+                  <td class="table-name"><span style="width:32px;height:32px;border-radius:8px;background:#F5F3FF;display:inline-flex;align-items:center;justify-content:center">🔗</span> API Integration</td>
+                  <td><span class="badge badge-accent">In Review</span></td>
+                  <td style="min-width:140px"><div class="progress-wrap"><div class="progress-bar progress-bar-accent" style="width:88%"></div></div><span style="font-size:0.75rem;color:var(--color-text-muted)">88%</span></td>
+                  <td><div class="avatar-group"><div class="avatar avatar-sm" style="background:#2563EB">SK</div><div class="avatar avatar-sm" style="background:#06B6D4">AR</div></div></td>
+                  <td style="font-size:0.85rem;color:var(--color-text-secondary)">Jul 28, 2026</td>
+                </tr>
+                <tr>
+                  <td class="table-name"><span style="width:32px;height:32px;border-radius:8px;background:#ECFDF5;display:inline-flex;align-items:center;justify-content:center">🗄️</span> Database Migration</td>
+                  <td><span class="badge badge-success">Completed</span></td>
+                  <td style="min-width:140px"><div class="progress-wrap"><div class="progress-bar progress-bar-success" style="width:100%"></div></div><span style="font-size:0.75rem;color:var(--color-text-muted)">100%</span></td>
+                  <td><div class="avatar-group"><div class="avatar avatar-sm" style="background:#10B981">MJ</div><div class="avatar avatar-sm" style="background:#8B5CF6">PK</div></div></td>
+                  <td style="font-size:0.85rem;color:var(--color-text-secondary)">Jul 20, 2026</td>
+                </tr>
+                <tr>
+                  <td class="table-name"><span style="width:32px;height:32px;border-radius:8px;background:#FFFBEB;display:inline-flex;align-items:center;justify-content:center">🛡️</span> Security Audit</td>
+                  <td><span class="badge badge-warning">Pending</span></td>
+                  <td style="min-width:140px"><div class="progress-wrap"><div class="progress-bar progress-bar-warning" style="width:15%"></div></div><span style="font-size:0.75rem;color:var(--color-text-muted)">15%</span></td>
+                  <td><div class="avatar-group"><div class="avatar avatar-sm" style="background:#EF4444">DL</div><div class="avatar avatar-sm" style="background:#F59E0B">RS</div><div class="avatar avatar-sm" style="background:#2563EB">SK</div></div></td>
+                  <td style="font-size:0.85rem;color:var(--color-text-secondary)">Oct 05, 2026</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- BOTTOM ROW: Activity Feed + Progress -->
+        <div class="grid grid-2 gap-8">
+          <!-- Activity Feed -->
+          <div class="card animate-on-scroll">
+            <h4 style="font-size:1.125rem;font-weight:600;margin-bottom:1rem">Recent Activity</h4>
+            <div class="activity-item"><div class="activity-icon" style="background:#EFF6FF;color:#2563EB">📋</div><div><div class="activity-text"><strong>Shiv</strong> created a new task "Update landing page hero"</div><div class="activity-time">2 minutes ago</div></div></div>
+            <div class="activity-item"><div class="activity-icon" style="background:#ECFDF5;color:#10B981">✅</div><div><div class="activity-text"><strong>Arjun</strong> completed "API endpoint testing"</div><div class="activity-time">15 minutes ago</div></div></div>
+            <div class="activity-item"><div class="activity-icon" style="background:#F5F3FF;color:#8B5CF6">💬</div><div><div class="activity-text"><strong>Priya</strong> commented on "Mobile navigation fix"</div><div class="activity-time">1 hour ago</div></div></div>
+            <div class="activity-item"><div class="activity-icon" style="background:#FFFBEB;color:#F59E0B">⚠️</div><div><div class="activity-text"><strong>Rahul</strong> flagged "Database backup" as urgent</div><div class="activity-time">3 hours ago</div></div></div>
+            <div class="activity-item"><div class="activity-icon" style="background:#ECFEFF;color:#06B6D4">🔄</div><div><div class="activity-text"><strong>Dev</strong> moved "Auth flow" to In Review</div><div class="activity-time">5 hours ago</div></div></div>
+            <div class="activity-item"><div class="activity-icon" style="background:#FDF2F8;color:#EC4899">🎉</div><div><div class="activity-text"><strong>Team</strong> Sprint 14 completed successfully!</div><div class="activity-time">Yesterday</div></div></div>
+          </div>
+
+          <!-- Project Progress -->
+          <div class="card animate-on-scroll delay-200">
+            <h4 style="font-size:1.125rem;font-weight:600;margin-bottom:1.5rem">Project Progress</h4>
+            <div class="progress-labeled"><div class="progress-header"><span class="progress-name">Website Redesign</span><span class="progress-percent">72%</span></div><div class="progress-wrap"><div class="progress-bar" style="width:72%"></div></div></div>
+            <div class="progress-labeled"><div class="progress-header"><span class="progress-name">Mobile App v2.0</span><span class="progress-percent">45%</span></div><div class="progress-wrap"><div class="progress-bar progress-bar-accent" style="width:45%"></div></div></div>
+            <div class="progress-labeled"><div class="progress-header"><span class="progress-name">API Integration</span><span class="progress-percent">88%</span></div><div class="progress-wrap"><div class="progress-bar progress-bar-purple" style="width:88%"></div></div></div>
+            <div class="progress-labeled"><div class="progress-header"><span class="progress-name">Database Migration</span><span class="progress-percent">100%</span></div><div class="progress-wrap"><div class="progress-bar progress-bar-success" style="width:100%"></div></div></div>
+            <div class="progress-labeled"><div class="progress-header"><span class="progress-name">Security Audit</span><span class="progress-percent">15%</span></div><div class="progress-wrap"><div class="progress-bar progress-bar-warning" style="width:15%"></div></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

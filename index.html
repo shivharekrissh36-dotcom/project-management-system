@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProManage — Premium Project Management System</title>
+  <meta name="description" content="ProManage is a premium project management platform for modern teams. Track tasks, manage sprints, and collaborate seamlessly.">
+  <meta name="keywords" content="project management, task tracking, team collaboration, kanban board, agile">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <div class="navbar-logo-icon">⚡</div>
+        ProManage
+      </a>
+
+      <div class="navbar-links">
+        <a href="#features" class="navbar-link">Features</a>
+        <a href="dashboard.html" class="navbar-link">Dashboard</a>
+        <a href="projects.html" class="navbar-link">Projects</a>
+        <a href="tasks.html" class="navbar-link">Tasks</a>
+        <a href="team.html" class="navbar-link">Team</a>
+        <a href="#pricing" class="navbar-link">Pricing</a>
+        <a href="#faq" class="navbar-link">FAQ</a>
+        <a href="#contact" class="navbar-link">Contact</a>
+      </div>
+
+      <div class="navbar-cta">
+        <a href="dashboard.html" class="btn btn-ghost btn-sm">Sign In</a>
+        <a href="dashboard.html" class="btn btn-primary btn-sm">Get Started Free →</a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggle" aria-label="Toggle menu">
+        <span class="navbar-toggle-bar"></span>
+        <span class="navbar-toggle-bar"></span>
+        <span class="navbar-toggle-bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="navbar-mobile-menu" id="mobileMenu">
+      <a href="#features" class="navbar-mobile-link">Features</a>
+      <a href="dashboard.html" class="navbar-mobile-link">Dashboard</a>
+      <a href="projects.html" class="navbar-mobile-link">Projects</a>
+      <a href="tasks.html" class="navbar-mobile-link">Tasks</a>
+      <a href="team.html" class="navbar-mobile-link">Team</a>
+      <a href="#pricing" class="navbar-mobile-link">Pricing</a>
+      <a href="#faq" class="navbar-mobile-link">FAQ</a>
+      <a href="#contact" class="navbar-mobile-link">Contact</a>
+      <div style="padding-top:0.5rem;display:flex;flex-direction:column;gap:0.5rem">
+        <a href="dashboard.html" class="btn btn-ghost btn-sm btn-block">Sign In</a>
+        <a href="dashboard.html" class="btn btn-primary btn-sm btn-block">Get Started Free</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-mesh"></div>
+    <div class="hero-circle hero-circle-1"></div>
+    <div class="hero-circle hero-circle-2"></div>
+
+    <div class="container">
+      <div class="grid grid-2 gap-12 items-center" style="grid-template-columns: 1fr 1.1fr">
+        <!-- Left: Content -->
+        <div class="hero-content" style="animation: slideUp 0.8s ease both">
+          <div class="hero-announce">
+            <span class="hero-announce-badge">New</span>
+            Introducing AI-Powered Sprint Planning ✨
+          </div>
+
+          <h1 class="hero-title">
+            The Modern Way to Manage
+            <span class="gradient-text" id="typing-text">Project Management</span>
+            <span style="display:inline-block;width:3px;height:0.9em;background:var(--color-primary);margin-left:2px;vertical-align:text-bottom;animation:blink 1s step-end infinite" id="typing-cursor"></span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Streamline your workflow with our intuitive project management platform. Plan sprints, track tasks, and collaborate with your team — all in one beautiful interface.
+          </p>
+
+          <div class="hero-actions">
+            <a href="dashboard.html" class="btn btn-primary btn-lg press-effect">
+              Start Free Trial →
+            </a>
+            <a href="#preview" class="btn btn-secondary btn-lg press-effect">
+              See Demo
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <div class="hero-trust-avatars">
+              <div class="avatar" style="background:#2563EB;margin-left:0">SK</div>
+              <div class="avatar" style="background:#06B6D4">AR</div>
+              <div class="avatar" style="background:#8B5CF6">PK</div>
+              <div class="avatar" style="background:#10B981">MJ</div>
+              <div class="avatar" style="background:#F59E0B">RS</div>
+            </div>
+            <div class="hero-trust-text">
+              <strong>10,000+</strong> teams already use ProManage
+              <br>
+              <span style="color:var(--color-warning)">★★★★★</span> <span style="font-size:0.8rem">4.9/5 rating</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Dashboard Preview -->
+        <div class="hero-preview hide-mobile" style="animation: slideLeft 0.8s ease 0.2s both">
+          <div class="hero-preview-main" style="padding:1.25rem">
+            <!-- Mini Dashboard Preview -->
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding:0 0.25rem">
+              <div style="display:flex;align-items:center;gap:0.5rem">
+                <div style="width:8px;height:8px;border-radius:50%;background:#EF4444"></div>
+                <div style="width:8px;height:8px;border-radius:50%;background:#F59E0B"></div>
+                <div style="width:8px;height:8px;border-radius:50%;background:#10B981"></div>
+              </div>
+              <div style="font-size:0.7rem;color:var(--color-text-muted);background:var(--color-surface);padding:2px 10px;border-radius:4px">promanage.app/dashboard</div>
+              <div style="width:24px"></div>
+            </div>
+            <!-- Stat Cards Row -->
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-bottom:1rem">
+              <div style="background:var(--color-surface);border-radius:12px;padding:0.75rem">
+                <div style="font-size:0.65rem;color:var(--color-text-muted);margin-bottom:0.25rem">Total Tasks</div>
+                <div style="font-family:var(--font-heading);font-size:1.25rem;font-weight:700;color:var(--color-text)">248</div>
+                <div style="font-size:0.6rem;color:var(--color-success)">↑ 12%</div>
+              </div>
+              <div style="background:var(--color-surface);border-radius:12px;padding:0.75rem">
+                <div style="font-size:0.65rem;color:var(--color-text-muted);margin-bottom:0.25rem">Completed</div>
+                <div style="font-family:var(--font-heading);font-size:1.25rem;font-weight:700;color:var(--color-success)">186</div>
+                <div style="font-size:0.6rem;color:var(--color-success)">↑ 8%</div>
+              </div>
+              <div style="background:var(--color-surface);border-radius:12px;padding:0.75rem">
+                <div style="font-size:0.65rem;color:var(--color-text-muted);margin-bottom:0.25rem">In Progress</div>
+                <div style="font-family:var(--font-heading);font-size:1.25rem;font-weight:700;color:var(--color-primary)">62</div>
+                <div style="font-size:0.6rem;color:var(--color-warning)">→ 2%</div>
+              </div>
+            </div>
+            <!-- Mini Chart -->
+            <div style="background:var(--color-surface);border-radius:12px;padding:0.75rem">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem">
+                <span style="font-size:0.7rem;font-weight:600;color:var(--color-text)">Weekly Progress</span>
+                <span class="chip chip-success" style="font-size:0.55rem;padding:1px 6px">● Live</span>
+              </div>
+              <div class="mini-chart" style="height:60px">
+                <div class="mini-bar" style="height:45%"></div>
+                <div class="mini-bar" style="height:70%"></div>
+                <div class="mini-bar" style="height:35%"></div>
+                <div class="mini-bar" style="height:55%"></div>
+                <div class="mini-bar active" style="height:85%"></div>
+                <div class="mini-bar" style="height:40%"></div>
+                <div class="mini-bar" style="height:65%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Notification -->
+          <div class="notif-popup animate-notif-pop" style="bottom:80px;right:-30px;z-index:3">
+            <div style="width:32px;height:32px;border-radius:10px;background:#ECFDF5;display:flex;align-items:center;justify-content:center;font-size:14px">✅</div>
+            <div>
+              <div style="font-weight:600;font-size:0.8rem;color:var(--color-text)">Task Completed</div>
+              <div style="font-size:0.7rem;color:var(--color-text-muted)">API Integration — just now</div>
+            </div>
+          </div>
+
+          <!-- Floating Status -->
+          <div class="notif-popup animate-notif-pop" style="top:60px;left:-20px;z-index:3;animation-delay:0.4s">
+            <div style="width:32px;height:32px;border-radius:10px;background:#EFF6FF;display:flex;align-items:center;justify-content:center;font-size:14px">🚀</div>
+            <div>
+              <div style="font-weight:600;font-size:0.8rem;color:var(--color-text)">Sprint 14 Started</div>
+              <div style="font-size:0.7rem;color:var(--color-text-muted)">12 tasks assigned</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       STATS BAR
+       ============================================================ -->
+  <section class="section-sm bg-surface" style="border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)">
+    <div class="container">
+      <div class="stats-row">
+        <div class="stats-row-item animate-on-scroll">
+          <div class="stats-row-value"><span class="counter" data-target="10000">0</span>+</div>
+          <div class="stats-row-label">Active Users</div>
+        </div>
+        <div class="stats-row-item animate-on-scroll delay-100">
+          <div class="stats-row-value"><span class="counter" data-target="50000">0</span>+</div>
+          <div class="stats-row-label">Tasks Managed</div>
+        </div>
+        <div class="stats-row-item animate-on-scroll delay-200">
+          <div class="stats-row-value"><span class="counter" data-target="500">0</span>+</div>
+          <div class="stats-row-label">Teams Worldwide</div>
+        </div>
+        <div class="stats-row-item animate-on-scroll delay-300" style="border-right:none">
+          <div class="stats-row-value">99.9<span style="font-size:0.6em">%</span></div>
+          <div class="stats-row-label">Uptime Guarantee</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FEATURES
+       ============================================================ -->
+  <section class="section section-lg" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">✨ Features</span>
+        <h2 class="section-title">Everything You Need to <span class="gradient-text">Deliver Projects</span></h2>
+        <p class="section-subtitle">Powerful tools designed for modern teams. From planning to deployment, ProManage has you covered.</p>
+      </div>
+
+      <div class="grid grid-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="feature-card hover-lift animate-on-scroll">
+          <div class="feature-icon feature-icon-primary">📋</div>
+          <h3 class="feature-title">Smart Task Board</h3>
+          <p class="feature-desc">Organize tasks with our intuitive Kanban board. Drag, drop, and prioritize with ease. Automatic status updates keep everyone in sync.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card hover-lift animate-on-scroll delay-100">
+          <div class="feature-icon feature-icon-accent">📊</div>
+          <h3 class="feature-title">Real-Time Analytics</h3>
+          <p class="feature-desc">Beautiful dashboards with live metrics. Track velocity, burndown charts, and team performance at a glance.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card hover-lift animate-on-scroll delay-200">
+          <div class="feature-icon feature-icon-success">👥</div>
+          <h3 class="feature-title">Team Collaboration</h3>
+          <p class="feature-desc">Built-in chat, comments, and mentions. Share files, review code, and make decisions together — all in context.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card hover-lift animate-on-scroll delay-100">
+          <div class="feature-icon feature-icon-warning">⏱️</div>
+          <h3 class="feature-title">Time Tracking</h3>
+          <p class="feature-desc">Track time spent on tasks automatically. Generate detailed timesheets and reports for billing and resource planning.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card hover-lift animate-on-scroll delay-200">
+          <div class="feature-icon feature-icon-purple">🔗</div>
+          <h3 class="feature-title">Integrations</h3>
+          <p class="feature-desc">Connect with Slack, GitHub, Figma, and 50+ tools. Automate workflows with our powerful API and webhooks.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card hover-lift animate-on-scroll delay-300">
+          <div class="feature-icon feature-icon-pink">🛡️</div>
+          <h3 class="feature-title">Enterprise Security</h3>
+          <p class="feature-desc">SOC 2 certified with end-to-end encryption. Role-based access control, SSO, and audit logs for complete governance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       DASHBOARD PREVIEW
+       ============================================================ -->
+  <section class="section bg-surface" id="preview" style="border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">🖥️ Dashboard</span>
+        <h2 class="section-title">A Beautiful <span class="gradient-text">Command Center</span></h2>
+        <p class="section-subtitle">Get a bird's-eye view of all your projects, tasks, and team activity in one stunning dashboard.</p>
+      </div>
+
+      <div class="animate-on-scroll" style="max-width:1000px;margin:0 auto">
+        <div class="card-glass" style="padding:1.5rem;border-radius:var(--radius-3xl);box-shadow:var(--shadow-2xl)">
+          <!-- Browser Chrome -->
+          <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem;padding:0 0.25rem">
+            <div style="width:10px;height:10px;border-radius:50%;background:#EF4444"></div>
+            <div style="width:10px;height:10px;border-radius:50%;background:#F59E0B"></div>
+            <div style="width:10px;height:10px;border-radius:50%;background:#10B981"></div>
+            <div style="flex:1;text-align:center;font-size:0.75rem;color:var(--color-text-muted);background:var(--color-surface);padding:4px 16px;border-radius:6px;margin:0 3rem">promanage.app/dashboard</div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:180px 1fr;gap:1rem;min-height:320px">
+            <!-- Mini Sidebar -->
+            <div style="background:white;border-radius:16px;padding:1rem;border:1px solid var(--color-border)">
+              <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:1.25rem">
+                <div style="width:24px;height:24px;background:var(--gradient-primary);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;color:white">⚡</div>
+                <span style="font-weight:700;font-size:0.8rem">ProManage</span>
+              </div>
+              <div style="font-size:0.65rem;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;font-weight:600">Main</div>
+              <div style="background:var(--color-primary-50);color:var(--color-primary);padding:6px 8px;border-radius:8px;font-size:0.7rem;font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:6px">📊 Dashboard</div>
+              <div style="padding:6px 8px;font-size:0.7rem;color:var(--color-text-secondary);display:flex;align-items:center;gap:6px">📋 Projects</div>
+              <div style="padding:6px 8px;font-size:0.7rem;color:var(--color-text-secondary);display:flex;align-items:center;gap:6px">✅ Tasks</div>
+              <div style="padding:6px 8px;font-size:0.7rem;color:var(--color-text-secondary);display:flex;align-items:center;gap:6px">👥 Team</div>
+            </div>
+
+            <!-- Mini Main Content -->
+            <div>
+              <!-- Mini Stats -->
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.5rem;margin-bottom:0.75rem">
+                <div style="background:white;border:1px solid var(--color-border);border-radius:10px;padding:0.6rem">
+                  <div style="font-size:0.55rem;color:var(--color-text-muted)">Projects</div>
+                  <div style="font-size:1rem;font-weight:700;font-family:var(--font-heading)">24</div>
+                  <div style="font-size:0.5rem;color:var(--color-success)">↑ 12%</div>
+                </div>
+                <div style="background:white;border:1px solid var(--color-border);border-radius:10px;padding:0.6rem">
+                  <div style="font-size:0.55rem;color:var(--color-text-muted)">Tasks</div>
+                  <div style="font-size:1rem;font-weight:700;font-family:var(--font-heading)">156</div>
+                  <div style="font-size:0.5rem;color:var(--color-success)">↑ 8%</div>
+                </div>
+                <div style="background:white;border:1px solid var(--color-border);border-radius:10px;padding:0.6rem">
+                  <div style="font-size:0.55rem;color:var(--color-text-muted)">Members</div>
+                  <div style="font-size:1rem;font-weight:700;font-family:var(--font-heading)">18</div>
+                  <div style="font-size:0.5rem;color:var(--color-accent)">+3 new</div>
+                </div>
+                <div style="background:white;border:1px solid var(--color-border);border-radius:10px;padding:0.6rem">
+                  <div style="font-size:0.55rem;color:var(--color-text-muted)">On-Time</div>
+                  <div style="font-size:1rem;font-weight:700;font-family:var(--font-heading)">92%</div>
+                  <div style="font-size:0.5rem;color:var(--color-success)">↑ 5%</div>
+                </div>
+              </div>
+
+              <!-- Mini Chart Area -->
+              <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:0.5rem">
+                <div style="background:white;border:1px solid var(--color-border);border-radius:10px;padding:0.6rem">
+                  <div style="font-size:0.65rem;font-weight:600;margin-bottom:0.5rem">Weekly Overview</div>
+                  <div class="mini-chart" style="height:80px">
+                    <div class="mini-bar" style="height:50%;background:rgba(37,99,235,0.15)"></div>
+                    <div class="mini-bar" style="height:75%;background:rgba(37,99,235,0.2)"></div>
+                    <div class="mini-bar" style="height:35%;background:rgba(37,99,235,0.15)"></div>
+                    <div class="mini-bar" style="height:60%;background:rgba(37,99,235,0.2)"></div>
+                    <div class="mini-bar active" style="height:90%"></div>
+                    <div class="mini-bar" style="height:42%;background:rgba(37,99,235,0.15)"></div>
+                    <div class="mini-bar" style="height:68%;background:rgba(37,99,235,0.2)"></div>
+                  </div>
+                </div>
+                <div style="background:white;border:1px solid var(--color-border);border-radius:10px;padding:0.6rem;display:flex;flex-direction:column;align-items:center;justify-content:center">
+                  <div style="width:70px;height:70px;border-radius:50%;border:8px solid var(--color-border-light);border-top-color:var(--color-success);border-right-color:var(--color-primary);position:relative;margin-bottom:0.5rem;animation:spin 3s linear infinite">
+                  </div>
+                  <div style="font-size:0.6rem;color:var(--color-text-muted);text-align:center">Task Distribution</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       KANBAN PREVIEW
+       ============================================================ -->
+  <section class="section section-lg" id="kanban">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">📋 Kanban</span>
+        <h2 class="section-title">Visual <span class="gradient-text">Task Management</span></h2>
+        <p class="section-subtitle">Drag and drop tasks between stages. See your workflow at a glance with our beautiful Kanban board.</p>
+      </div>
+
+      <div class="animate-on-scroll">
+        <div style="background:var(--color-surface);border-radius:var(--radius-3xl);padding:1.5rem;border:1px solid var(--color-border);overflow-x:auto">
+          <div style="display:grid;grid-template-columns:repeat(4,minmax(220px,1fr));gap:1rem">
+            <!-- Backlog -->
+            <div style="background:white;border-radius:16px;padding:1rem">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--color-border)">
+                <div style="display:flex;align-items:center;gap:6px;font-size:0.85rem;font-weight:600"><span style="width:8px;height:8px;border-radius:50%;background:#94A3B8"></span>Backlog</div>
+                <span style="background:var(--color-border);font-size:0.7rem;font-weight:600;padding:1px 7px;border-radius:99px;color:var(--color-text-secondary)">3</span>
+              </div>
+              <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:0.75rem;margin-bottom:0.5rem">
+                <span class="chip chip-purple" style="margin-bottom:0.5rem">Design</span>
+                <div style="font-size:0.8rem;font-weight:500;margin-bottom:0.5rem">Design system component library</div>
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <div class="avatar avatar-sm" style="background:#8B5CF6;font-size:0.6rem">PK</div>
+                  <span style="font-size:0.65rem;color:var(--color-text-muted)">Aug 20</span>
+                </div>
+              </div>
+              <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:0.75rem;margin-bottom:0.5rem">
+                <span class="chip chip-primary" style="margin-bottom:0.5rem">Frontend</span>
+                <div style="font-size:0.8rem;font-weight:500;margin-bottom:0.5rem">Implement dark mode toggle</div>
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <div class="avatar avatar-sm" style="background:#06B6D4;font-size:0.6rem">AR</div>
+                  <span style="font-size:0.65rem;color:var(--color-text-muted)">Aug 25</span>
+                </div>
+              </div>
+              <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:0.75rem">
+                <span class="chip chip-accent" style="margin-bottom:0.5rem">Research</span>
+                <div style="font-size:0.8rem;font-weight:500;margin-bottom:0.5rem">Evaluate new CI/CD tools</div>
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <div class="avatar avatar-sm" style="background:#F59E0B;font-size:0.6rem">RS</div>
+                  <span style="font-size:0.65rem;color:var(--color-text-muted)">Sep 01</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- In Progress -->
+            <div style="background:white;border-radius:16px;padding:1rem">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--color-border)">
+                <div style="display:flex;align-items:center;gap:6px;font-size:0.85rem;font-weight:600"><span style="width:8px;height:8px;border-radius:50%;background:#2563EB"></span>In Progress</div>
+                <span style="background:var(--color-primary-50);font-size:0.7rem;font-weight:600;padding:1px 7px;border-radius:99px;color:var(--color-primary)">2</span>
+              </div>
+              <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:0.75rem;margin-bottom:0.5rem;border-left:3px solid var(--color-error)">
+                <span class="chip chip-error" style="margin-bottom:0.5rem">🔥 Urgent</span>
+                <div style="font-size:0.8rem;font-weight:500;margin-bottom:0.5rem">Fix auth token refresh bug</div>
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <div class="avatar avatar-sm" style="background:#2563EB;font-size:0.6rem">SK</div>
+                  <span style="font-size:0.65rem;color:var(--color-text-muted)">Jul 28</span>
+                </div>
+              </div>
+              <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:0.75rem">
+                <span class="chip chip-primary" style="margin-bottom:0.5rem">Frontend</span>
+                <div style="font-size:0.8rem;font-weight:500;margin-bottom:0.5rem">Build responsive dashboard</div>
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <div class="avatar avatar-sm" style="background:#06B6D4;font-size:0.6rem">AR</div>
+                  <span style="font-size:0.65rem;color:var(--color-text-muted)">Aug 05</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- In Review -->
+            <div style="background:white;border-radius:16px;padding:1rem">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--color-border)">
+                <div style="display:flex;align-items:center;gap:6px;font-size:0.85rem;font-weight:600"><span style="width:8px;height:8px;border-radius:50%;background:#F59E0B"></span>In Review</div>
+                <span style="background:#FFFBEB;font-size:0.7rem;font-weight:600;padding:1px 7px;border-radius:99px;color:var(--color-warning)">2</span>
+              </div>
+              <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:0.75rem;margin-bottom:0.5rem">
+                <span class="chip chip-success" style="margin-bottom:0.5rem">QA</span>
+                <div style="font-size:0.8rem;font-weight:500;margin-bottom:0.5rem">E2E testing: checkout flow</div>
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <div class="avatar avatar-sm" style="background:#EC4899;font-size:0.6rem">DL</div>
+                  <span style="font-size:0.65rem;color:var(--color-text-muted)">Jul 25</span>
+                </div>
+              </div>
+              <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:0.75rem">
+                <span class="chip chip-accent" style="margin-bottom:0.5rem">DevOps</span>
+                <div style="font-size:0.8rem;font-weight:500;margin-bottom:0.5rem">Configure staging environment</div>
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <div class="avatar avatar-sm" style="background:#F59E0B;font-size:0.6rem">RS</div>
+                  <span style="font-size:0.65rem;color:var(--color-text-muted)">Jul 27</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Done -->
+            <div style="background:white;border-radius:16px;padding:1rem">
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid var(--color-border)">
+                <div style="display:flex;align-items:center;gap:6px;font-size:0.85rem;font-weight:600"><span style="width:8px;height:8px;border-radius:50%;background:#10B981"></span>Done</div>
+                <span style="background:#ECFDF5;font-size:0.7rem;font-weight:600;padding:1px 7px;border-radius:99px;color:var(--color-success)">2</span>
+              </div>
+              <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:0.75rem;margin-bottom:0.5rem;opacity:0.75">
+                <span class="chip chip-success" style="margin-bottom:0.5rem">✓ Done</span>
+                <div style="font-size:0.8rem;font-weight:500;margin-bottom:0.5rem;text-decoration:line-through;color:var(--color-text-muted)">User onboarding emails</div>
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <div class="avatar avatar-sm" style="background:#10B981;font-size:0.6rem">MJ</div>
+                  <span style="font-size:0.65rem;color:var(--color-text-muted)">Jul 18</span>
+                </div>
+              </div>
+              <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:10px;padding:0.75rem;opacity:0.75">
+                <span class="chip chip-success" style="margin-bottom:0.5rem">✓ Done</span>
+                <div style="font-size:0.8rem;font-weight:500;margin-bottom:0.5rem;text-decoration:line-through;color:var(--color-text-muted)">Payment gateway integration</div>
+                <div style="display:flex;align-items:center;justify-content:space-between">
+                  <div class="avatar avatar-sm" style="background:#10B981;font-size:0.6rem">MJ</div>
+                  <span style="font-size:0.65rem;color:var(--color-text-muted)">Jul 15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:2.5rem">
+        <a href="projects.html" class="btn btn-primary btn-lg press-effect">Try Kanban Board →</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TIMELINE
+       ============================================================ -->
+  <section class="section bg-surface" id="timeline" style="border-top:1px solid var(--color-border)">
+    <div class="container" style="max-width:700px">
+      <div class="section-header">
+        <span class="section-label">📅 Timeline</span>
+        <h2 class="section-title">Project <span class="gradient-text">Milestones</span></h2>
+        <p class="section-subtitle">Track project progress with clear milestones and deadlines.</p>
+      </div>
+
+      <div class="timeline animate-on-scroll">
+        <div class="timeline-item">
+          <div class="timeline-date">Jul 01, 2026</div>
+          <div class="timeline-title">Project Kickoff</div>
+          <div class="timeline-desc">Requirements gathering, stakeholder alignment, and sprint planning workshop completed.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Jul 15, 2026</div>
+          <div class="timeline-title">Design Phase Complete</div>
+          <div class="timeline-desc">Wireframes, UI mockups, and design system approved. Ready for development.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Aug 01, 2026</div>
+          <div class="timeline-title">Sprint 1 — Backend APIs</div>
+          <div class="timeline-desc">Core REST API endpoints built. Authentication, authorization, and database schema finalized.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Aug 15, 2026</div>
+          <div class="timeline-title">Sprint 2 — Frontend Integration</div>
+          <div class="timeline-desc">UI components connected to API. Dashboard, kanban board, and team views operational.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Sep 01, 2026</div>
+          <div class="timeline-title">QA & User Testing</div>
+          <div class="timeline-desc">End-to-end testing, performance audits, accessibility checks, and beta user feedback.</div>
+        </div>
+        <div class="timeline-item" style="padding-bottom:0">
+          <div class="timeline-date">Sep 15, 2026</div>
+          <div class="timeline-title">🚀 Production Launch</div>
+          <div class="timeline-desc">Deployment to production. Monitoring, support, and iteration on feedback.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TEAM MEMBERS
+       ============================================================ -->
+  <section class="section section-lg" id="team">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">👥 Team</span>
+        <h2 class="section-title">Meet Our <span class="gradient-text">Amazing Team</span></h2>
+        <p class="section-subtitle">The talented people behind ProManage who make project management effortless.</p>
+      </div>
+
+      <div class="grid grid-3 gap-8">
+        <div class="team-card hover-lift animate-on-scroll">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#2563EB,#1D4ED8)">SK</div>
+          <h4 class="team-name">Shiv Harekrishh</h4>
+          <p class="team-role">Project Manager</p>
+          <div class="team-skills">
+            <span class="chip chip-primary">Leadership</span>
+            <span class="chip">Agile</span>
+            <span class="chip">Strategy</span>
+          </div>
+          <div class="team-social">
+            <a href="#" class="team-social-link" aria-label="Email">📧</a>
+            <a href="#" class="team-social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="team-social-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+
+        <div class="team-card hover-lift animate-on-scroll delay-100">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#06B6D4,#0891B2)">AR</div>
+          <h4 class="team-name">Arjun Reddy</h4>
+          <p class="team-role">Frontend Developer</p>
+          <div class="team-skills">
+            <span class="chip chip-accent">React</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">CSS</span>
+          </div>
+          <div class="team-social">
+            <a href="#" class="team-social-link" aria-label="Email">📧</a>
+            <a href="#" class="team-social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="team-social-link" aria-label="GitHub">🐱</a>
+          </div>
+        </div>
+
+        <div class="team-card hover-lift animate-on-scroll delay-200">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#8B5CF6,#7C3AED)">PK</div>
+          <h4 class="team-name">Priya Kapoor</h4>
+          <p class="team-role">UI/UX Designer</p>
+          <div class="team-skills">
+            <span class="chip chip-purple">Figma</span>
+            <span class="chip">Design Systems</span>
+            <span class="chip">Research</span>
+          </div>
+          <div class="team-social">
+            <a href="#" class="team-social-link" aria-label="Email">📧</a>
+            <a href="#" class="team-social-link" aria-label="Dribbble">🎨</a>
+            <a href="#" class="team-social-link" aria-label="LinkedIn">💼</a>
+          </div>
+        </div>
+
+        <div class="team-card hover-lift animate-on-scroll">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#10B981,#059669)">MJ</div>
+          <h4 class="team-name">Meera Joshi</h4>
+          <p class="team-role">Backend Developer</p>
+          <div class="team-skills">
+            <span class="chip chip-success">Node.js</span>
+            <span class="chip">Python</span>
+            <span class="chip">AWS</span>
+          </div>
+          <div class="team-social">
+            <a href="#" class="team-social-link" aria-label="Email">📧</a>
+            <a href="#" class="team-social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="team-social-link" aria-label="GitHub">🐱</a>
+          </div>
+        </div>
+
+        <div class="team-card hover-lift animate-on-scroll delay-100">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#F59E0B,#D97706)">RS</div>
+          <h4 class="team-name">Rahul Sharma</h4>
+          <p class="team-role">DevOps Engineer</p>
+          <div class="team-skills">
+            <span class="chip chip-warning">Docker</span>
+            <span class="chip">K8s</span>
+            <span class="chip">CI/CD</span>
+          </div>
+          <div class="team-social">
+            <a href="#" class="team-social-link" aria-label="Email">📧</a>
+            <a href="#" class="team-social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="team-social-link" aria-label="GitHub">🐱</a>
+          </div>
+        </div>
+
+        <div class="team-card hover-lift animate-on-scroll delay-200">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#EC4899,#DB2777)">DL</div>
+          <h4 class="team-name">Dev Lakhani</h4>
+          <p class="team-role">QA Engineer</p>
+          <div class="team-skills">
+            <span class="chip chip-error">Selenium</span>
+            <span class="chip">Jest</span>
+            <span class="chip">Cypress</span>
+          </div>
+          <div class="team-social">
+            <a href="#" class="team-social-link" aria-label="Email">📧</a>
+            <a href="#" class="team-social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="team-social-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       TESTIMONIALS
+       ============================================================ -->
+  <section class="section bg-surface" id="testimonials" style="border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">💬 Testimonials</span>
+        <h2 class="section-title">Loved by <span class="gradient-text">Teams Worldwide</span></h2>
+        <p class="section-subtitle">See what our customers are saying about ProManage.</p>
+      </div>
+
+      <div class="grid grid-3 gap-8">
+        <div class="testimonial-card hover-lift animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"ProManage transformed our team's workflow. The Kanban board is intuitive and the analytics help us make data-driven decisions. Best PM tool we've used."</p>
+          <div class="testimonial-author">
+            <div class="avatar" style="background:#2563EB">AK</div>
+            <div>
+              <div class="testimonial-name">Ankit Kumar</div>
+              <div class="testimonial-role">CTO, TechVista Solutions</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card hover-lift animate-on-scroll delay-100">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The clean UI is what sold us. No clutter, no learning curve. Our designers and developers both love it. Sprint velocity increased by 35% in the first month."</p>
+          <div class="testimonial-author">
+            <div class="avatar" style="background:#8B5CF6">NS</div>
+            <div>
+              <div class="testimonial-name">Nisha Sethi</div>
+              <div class="testimonial-role">Product Lead, DesignCraft</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card hover-lift animate-on-scroll delay-200">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Switching from Jira to ProManage was the best decision. The timeline view helps us stay on track and the integrations with GitHub are seamless."</p>
+          <div class="testimonial-author">
+            <div class="avatar" style="background:#10B981">RP</div>
+            <div>
+              <div class="testimonial-name">Raj Patel</div>
+              <div class="testimonial-role">Engineering Manager, CloudFirst</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PRICING
+       ============================================================ -->
+  <section class="section section-lg" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">💎 Pricing</span>
+        <h2 class="section-title">Simple, Transparent <span class="gradient-text">Pricing</span></h2>
+        <p class="section-subtitle">Start free and scale as you grow. No hidden fees, cancel anytime.</p>
+      </div>
+
+      <div class="grid grid-3 gap-8" style="max-width:1000px;margin:0 auto;align-items:center">
+        <!-- Free -->
+        <div class="pricing-card hover-lift animate-on-scroll">
+          <h3 class="pricing-name">Starter</h3>
+          <p style="color:var(--color-text-secondary);font-size:var(--text-sm);margin-bottom:1rem">Perfect for small teams getting started</p>
+          <div class="pricing-price"><sup>$</sup>0<span>/mo</span></div>
+          <p class="pricing-desc">Free forever for up to 5 users</p>
+          <div class="pricing-features">
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> Up to 5 team members</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> 3 active projects</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> Kanban board</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> Basic analytics</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon x">✗</span><span style="opacity:0.5">Timeline view</span></div>
+            <div class="pricing-feature"><span class="pricing-feature-icon x">✗</span><span style="opacity:0.5">Custom integrations</span></div>
+          </div>
+          <a href="dashboard.html" class="btn btn-secondary btn-block btn-lg press-effect">Get Started</a>
+        </div>
+
+        <!-- Pro (Featured) -->
+        <div class="pricing-card featured hover-lift animate-on-scroll delay-100">
+          <span class="pricing-badge">Most Popular</span>
+          <h3 class="pricing-name">Professional</h3>
+          <p style="opacity:0.8;font-size:var(--text-sm);margin-bottom:1rem">For growing teams that need more power</p>
+          <div class="pricing-price"><sup>$</sup>12<span>/user/mo</span></div>
+          <p class="pricing-desc">Billed annually, or $15 monthly</p>
+          <div class="pricing-features">
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> Unlimited team members</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> Unlimited projects</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> Advanced Kanban + Timeline</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> Advanced analytics & reports</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> Custom integrations</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> Priority support</div>
+          </div>
+          <a href="dashboard.html" class="btn btn-white btn-block btn-lg press-effect">Start Free Trial</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card hover-lift animate-on-scroll delay-200">
+          <h3 class="pricing-name">Enterprise</h3>
+          <p style="color:var(--color-text-secondary);font-size:var(--text-sm);margin-bottom:1rem">For organizations with advanced needs</p>
+          <div class="pricing-price" style="font-size:var(--text-4xl)">Custom</div>
+          <p class="pricing-desc">Tailored to your organization</p>
+          <div class="pricing-features">
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> Everything in Pro</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> SSO & SAML</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> Advanced security & audit</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> Custom onboarding</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> Dedicated account manager</div>
+            <div class="pricing-feature"><span class="pricing-feature-icon check">✓</span> 99.99% SLA guarantee</div>
+          </div>
+          <a href="#contact" class="btn btn-secondary btn-block btn-lg press-effect">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FAQ
+       ============================================================ -->
+  <section class="section bg-surface" id="faq" style="border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)">
+    <div class="container" style="max-width:700px">
+      <div class="section-header">
+        <span class="section-label">❓ FAQ</span>
+        <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <p class="section-subtitle">Got questions? We've got answers.</p>
+      </div>
+
+      <div class="card" style="border-radius:var(--radius-3xl);padding:0.5rem 2rem">
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            What is ProManage?
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p class="accordion-body">ProManage is a modern project management platform designed for agile teams. It includes Kanban boards, timeline views, real-time analytics, and team collaboration tools — all in a beautifully crafted interface inspired by tools like Linear, Notion, and Asana.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            Is there a free plan?
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p class="accordion-body">Yes! Our Starter plan is free forever for teams of up to 5 members with 3 active projects. It includes our Kanban board, basic analytics, and core collaboration features. No credit card required to get started.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            Can I import data from other tools?
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p class="accordion-body">Absolutely. ProManage supports one-click imports from Jira, Trello, Asana, Monday.com, and CSV files. Our migration wizard guides you through the process and maps your data automatically.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            What integrations do you support?
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p class="accordion-body">We integrate with 50+ tools including Slack, GitHub, GitLab, Figma, Google Workspace, Microsoft Teams, and more. Our REST API and webhooks allow you to build custom integrations for any workflow.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            Is my data secure?
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p class="accordion-body">Security is our top priority. We are SOC 2 Type II certified with end-to-end encryption, role-based access control, SSO support, and comprehensive audit logs. Data is stored in ISO 27001 certified data centers with daily backups.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" aria-expanded="false">
+            Can I cancel my subscription anytime?
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-content">
+            <p class="accordion-body">Yes, you can cancel your subscription at any time with no penalties. Your data remains accessible for 30 days after cancellation, and you can export everything at any point. We also offer prorated refunds for annual plans.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CONTACT
+       ============================================================ -->
+  <section class="section section-lg" id="contact">
+    <div class="container" style="max-width:600px">
+      <div class="section-header">
+        <span class="section-label">📩 Contact</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtitle">Have questions or feedback? We'd love to hear from you.</p>
+      </div>
+
+      <div class="contact-card animate-on-scroll">
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="name">Full Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required>
+            <span class="form-error" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="you@company.com" required>
+            <span class="form-error" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" class="form-input" placeholder="How can we help?">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Tell us what you need..." required></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block press-effect">
+            Send Message →
+          </button>
+
+          <p style="text-align:center;font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-4)">
+            We typically respond within 24 hours.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Column -->
+        <div>
+          <a href="index.html" class="footer-logo">
+            <div class="footer-logo-icon">⚡</div>
+            ProManage
+          </a>
+          <p class="footer-tagline">The modern project management platform for teams who ship. Built for speed, designed for clarity.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="footer-social-link" aria-label="GitHub">🐱</a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="footer-social-link" aria-label="YouTube">📺</a>
+          </div>
+        </div>
+
+        <!-- Product -->
+        <div>
+          <h4 class="footer-col-title">Product</h4>
+          <a href="#features" class="footer-link">Features</a>
+          <a href="#pricing" class="footer-link">Pricing</a>
+          <a href="dashboard.html" class="footer-link">Dashboard</a>
+          <a href="projects.html" class="footer-link">Kanban Board</a>
+          <a href="#" class="footer-link">Integrations</a>
+          <a href="#" class="footer-link">Changelog</a>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <a href="#" class="footer-link">About Us</a>
+          <a href="#team" class="footer-link">Team</a>
+          <a href="#" class="footer-link">Careers</a>
+          <a href="#" class="footer-link">Blog</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h4 class="footer-col-title">Resources</h4>
+          <a href="#" class="footer-link">Documentation</a>
+          <a href="#" class="footer-link">API Reference</a>
+          <a href="#faq" class="footer-link">FAQ</a>
+          <a href="#" class="footer-link">Community</a>
+          <a href="#" class="footer-link">Status</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 ProManage. All rights reserved. Built with ❤️ by Shiv Harekrishh.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+
+  <!-- Responsive hero grid fix for mobile -->
+  <style>
+    @media (max-width: 768px) {
+      .hero .grid-2 { grid-template-columns: 1fr !important; }
+      .hero-content { text-align: center; }
+      .hero-subtitle { margin: 0 auto var(--space-8); }
+      .hero-actions { justify-content: center; }
+      .hero-trust { justify-content: center; }
+      .pricing-card.featured { transform: scale(1); }
+      .pricing-card.featured:hover { transform: translateY(-6px); }
+      .footer-top { text-align: center; }
+      .footer-socials { justify-content: center; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-bottom-links { justify-content: center; }
+    }
+
+    @media (max-width: 1024px) {
+      .hero .grid-2 { grid-template-columns: 1fr !important; }
+      #kanban .section-header + .animate-on-scroll > div { grid-template-columns: repeat(2, minmax(220px, 1fr)) !important; }
+    }
+
+    @media (max-width: 640px) {
+      #kanban .section-header + .animate-on-scroll > div { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</body>
+</html>
